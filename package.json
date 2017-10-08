@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "create": "webpack",
+    "start": "webpack-dev-server --open",
+    "production": "webpack -p",
+    "build": "SET NODE_ENV='production' & webpack -p",
+    "firebase-init": "firebase login & firebase init",
+    "deploy": "npm run build & firebase deploy"
   },
   "babel": {
     "presets": [
@@ -21,7 +26,8 @@
     "query-string": "^5.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "webpack-dev-server": "^2.9.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -29,9 +35,10 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.7",
+    "firebase-tools": "^3.13.1",
     "html-webpack-plugin": "^2.30.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.8.2"
+    "webpack-dev-server": "^2.9.1"
   }
 }
