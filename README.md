@@ -1,3 +1,7 @@
 # GitHub Battle w/ React
 
-## WIP: Learning React
+To run this project:
+
+- npm install
+
+- npm run start
